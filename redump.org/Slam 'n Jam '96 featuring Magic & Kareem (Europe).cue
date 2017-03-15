@@ -1,0 +1,3 @@
+FILE "Slam 'n Jam '96 featuring Magic & Kareem (Europe).bin" BINARY
+  TRACK 01 MODE2/2352
+    INDEX 01 00:00:00
