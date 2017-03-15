@@ -1,0 +1,3 @@
+FILE "Final Fantasy IX (G) (Disc 1) [SLES-02967].bin" BINARY
+  TRACK 01 MODE2/2352
+    INDEX 01 00:00:00
