@@ -9,8 +9,6 @@ This is a collection of `cue` and `sbi` files found around the web.
 
 The file `disk.hash` contains the SHA-1 hash identification of bin, iso and mdf files. With the same name, but with the `.cue` extension you can find the corresponding cue file, just search it in this repo.
 
-
-
 ## What are `cue` files
 
 ## Generating a generic `cue` file
@@ -32,3 +30,5 @@ source generate-cue.sh
 ```
 
  It's expected that you create a folder for each game, that will contain one or more disks. This script will generate both, `.cue` file for each disk and `.m3u` file containing the reference to all other cue files.
+
+> Be aware that this script will delete **ALL** `.cue` files and `.m3u` files in that folder !
