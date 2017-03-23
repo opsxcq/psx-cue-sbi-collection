@@ -31,3 +31,4 @@ This script hold a function, to use this function, you need to `source` the file
 source generate-cue.sh
 ```
 
+ It's expected that you create a folder for each game, that will contain one or more disks. This script will generate both, `.cue` file for each disk and `.m3u` file containing the reference to all other cue files.
