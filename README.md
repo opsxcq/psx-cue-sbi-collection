@@ -24,3 +24,5 @@ FILE "filename" BINARY
   TRACK 01 MODE2/2352
     INDEX 01 00:00:00
 ```
+
+This script hold a function, to use this function, you need to `source` the file.
