@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function cue-gen() {
+
 rm *.m3u
 
 ### BIN

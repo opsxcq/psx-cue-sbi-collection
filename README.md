@@ -26,3 +26,8 @@ FILE "filename" BINARY
 ```
 
 This script hold a function, to use this function, you need to `source` the file.
+
+```
+source generate-cue.sh
+```
+
