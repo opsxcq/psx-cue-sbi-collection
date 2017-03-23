@@ -5,11 +5,15 @@ This is a collection of `cue` and `sbi` files found around the web.
 * Over 8.5k files from redump.org
 * Over 1.1k files from emuparadise.me
 
-## Database
+
+
+# Database
 
 The file `disk.hash` contains the SHA-1 hash identification of bin, iso and mdf files. With the same name, but with the `.cue` extension you can find the corresponding cue file, just search it in this repo.
 
-## What are `cue` files
+
+
+# What are `cue` files
 
 Cue sheets can describe many types of audio and data CDs. The main data (including audio) for a CD described by a cue sheet is stored in one or more files referenced by the cue sheet. Cue sheets also specify track lengths, and CD-Text including track and disc titles and performers. They are especially useful when dividing audio stored in a single file into multiple songs or tracks. The data files referred to by the cue sheet may be audio files (commonly in MP3 or WAV format), or plain disc images, usually with a .bin extension.
 
@@ -17,7 +21,26 @@ When used for disc images, the format is usually called CUE/BIN, indicating that
 
 A cue sheet can also be a list of songs appearing in a film or TV show. The cue sheet shows all the music titles with metadata like composers, publishers, length of use, and shares of ownership. The cue sheet helps determine who should be paid when the film or TV show airs.
 
-## Generating a generic `cue` file
+## Cue Sheet file format
+
+A cue sheet is a plain text file containing commands with one or more parameters. The commands usually apply either to the whole disc or to an individual track, depending on the particular command and the context. They may describe the layout of data to be written, or CD-Text (metadata). The original specification of the cue sheet syntax and semantics appears in the CDRWIN User Guide.[4]
+
+The standard commands are:
+
+* `FILES` - Names a file containing the data and its format (such as MP3, and WAVE audio file formats, and plain "binary" disc images)
+* `TRACK` - Defines a track context, providing its number and type or mode (for instance AUDIO or various CD-ROM modes). Some commands that follow this command apply to the track rather than the entire disc.
+* `INDEX` - Indicates an index (position) within the current FILE. The position is specified in mm:ss:ff (minute-second-frame) format. There are 75 such frames per second of audio. In the context of cue sheets, "frames" refer to CD sectors, despite a different, lower-level structure in CDs also being known as frames.[6] INDEX 01 is required and denotes the start of the track, while INDEX 00 is optional and denotes the pregap. The pregap of Track 1 is used for Hidden Track One Audio (HTOA). Optional higher-numbered indexes (02 through 99) are also allowed.
+* `PREGAP` and `POSTGAP` - Indicates the length of a track's pregap or postgap, which is not stored in any data file. The length is specified in the same minute-second-frame format as for INDEX.
+
+
+
+# Why you need a `.cue` file for ?
+
+Withtou a `.cue` file, some games run without background music, just with sound effect. If you experience like that, most likely you don't have the right cue file.
+
+
+
+# Generating a generic `cue` file
 
 Along with this file collection, you can find a script called `generate-cue.sh`, this script will generate a default cue file, it's not guaranteed that it will work, but it's better than nothing.
 
