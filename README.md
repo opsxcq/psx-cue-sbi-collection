@@ -11,6 +11,12 @@ The file `disk.hash` contains the SHA-1 hash identification of bin, iso and mdf 
 
 ## What are `cue` files
 
+Cue sheets can describe many types of audio and data CDs. The main data (including audio) for a CD described by a cue sheet is stored in one or more files referenced by the cue sheet. Cue sheets also specify track lengths, and CD-Text including track and disc titles and performers. They are especially useful when dividing audio stored in a single file into multiple songs or tracks. The data files referred to by the cue sheet may be audio files (commonly in MP3 or WAV format), or plain disc images, usually with a .bin extension.
+
+When used for disc images, the format is usually called CUE/BIN, indicating that it stores a disc image composed of one cue sheet file and one or more .bin files. The .bin files are raw sector-by-sector binary copies of tracks in the original discs. These binary .bin files usually contain all 2,352 bytes from each sector in an optical disc, including control headers and error correction data in the case of CD-ROMs (unlike ISO images of CD-ROMs, which store only the user data). However, the TRACK command in a cue sheet file can be used to refer to binary disc images that contain only the user data of each sector, by indicating the specific CD mode of the tracks from which the image was created (which is necessary to know the size of the user data in each sector).
+
+A cue sheet can also be a list of songs appearing in a film or TV show. The cue sheet shows all the music titles with metadata like composers, publishers, length of use, and shares of ownership. The cue sheet helps determine who should be paid when the film or TV show airs.
+
 ## Generating a generic `cue` file
 
 Along with this file collection, you can find a script called `generate-cue.sh`, this script will generate a default cue file, it's not guaranteed that it will work, but it's better than nothing.
