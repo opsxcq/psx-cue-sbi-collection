@@ -1,6 +1,6 @@
 # Playstation cue and sbi files collection
 
-This is a collection of `cue` and `sbi` files found around the web.
+This is a collection of `cue` and `sbi` files found around the web for **Playstation One (PSX)** roms.
 
 * Over 8.5k files from redump.org
 * Over 1.1k files from emuparadise.me
@@ -73,4 +73,3 @@ After that, just run the function
 ```
 cue-gen 'filename.bin'
 ```
-
