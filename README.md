@@ -27,10 +27,16 @@ A cue sheet is a plain text file containing commands with one or more parameters
 
 The standard commands are:
 
-* `FILES` - Names a file containing the data and its format (such as MP3, and WAVE audio file formats, and plain "binary" disc images)
+* `FILES` - Names a file containing the data and its format (such as MP3, and WAVE audio file formats, and plain "binary" disc images).
 * `TRACK` - Defines a track context, providing its number and type or mode (for instance AUDIO or various CD-ROM modes). Some commands that follow this command apply to the track rather than the entire disc.
 * `INDEX` - Indicates an index (position) within the current FILE. The position is specified in mm:ss:ff (minute-second-frame) format. There are 75 such frames per second of audio. In the context of cue sheets, "frames" refer to CD sectors, despite a different, lower-level structure in CDs also being known as frames.[6] INDEX 01 is required and denotes the start of the track, while INDEX 00 is optional and denotes the pregap. The pregap of Track 1 is used for Hidden Track One Audio (HTOA). Optional higher-numbered indexes (02 through 99) are also allowed.
 * `PREGAP` and `POSTGAP` - Indicates the length of a track's pregap or postgap, which is not stored in any data file. The length is specified in the same minute-second-frame format as for INDEX.
+* `REM` - Adds a comment that usually has no bearing on the written CD at all, with the exception of some applications that use it to store additional metadata (e.g. Exact Audio Copy writes some additional fields, which foobar2000 can read). REM should not appear on a line by itself as some applications regard it as a syntax error.
+* `CDTEXTFILE` - Identifies a file containing CD-Text information.
+* `FLAGS` - Sets subcode flags of a track.
+* `CATALOG` - Contains the UPC/EAN code of the disc.
+* `ISRC` - Define the ISRC of the current TRACK.
+* `TITLE`, `PERFORMER` and `SONGWRITER` - CD-Text metadata; applies to the whole disc or a specific track, depending on the context. 
 
 
 
