@@ -67,3 +67,10 @@ source generate-cue.sh
  It's expected that you create a folder for each game, that will contain one or more disks. This script will generate both, `.cue` file for each disk and `.m3u` file containing the reference to all other cue files.
 
 > Be aware that this script will delete **ALL** `.cue` files and `.m3u` files in that folder !
+
+After that, just run the function
+
+```
+cue-gen 'filename.bin'
+```
+
